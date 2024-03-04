@@ -3,8 +3,10 @@ const port = 6001;
 
 
 const app = new Elysia()
-    .get("*", (body) => console.log(body))
-    .post("*", (body) => console.log(body))
+    .get("*", ({body}) => body)
+    .post("*", ({body}) => {
+        console.log(body);
+    })
     .listen(port)
 
 
