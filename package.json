@@ -15,6 +15,7 @@
     "sync": "bunx prisma migrate dev --name init"
   },
   "dependencies": {
+    "axios": "^1.6.7",
     "elysia": "^0.8.17"
   }
 }
