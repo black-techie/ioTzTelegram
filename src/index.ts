@@ -4,28 +4,10 @@ const port = 6001;
 
 const app = new Elysia()
     
-    .get("*", ({ body }) => body)
+    .get("*", ({ body }) => console.log(body))
 
     .post("*", ({ body }) => {
-        const id = body.chat.id;
-        const text = body.text;
-        const user = body.chat.first_name;
-        fetch("https://api.telegram.org/bot7152328164:AAGzkucP0M9Mtq3QEJQMqwbZd0xkrhZqWIA", {
-            method: "POST",
-            body: JSON.stringify({ chat_id: id, text: `Greetings ${user}` })
-        })
-        .then(res => res.json())
-        .then(res => console.log(`response from sent data : ${res}`))
-        console.log("Body",body)
-    }, {
-        body: t.Object({
-            messages: t.Object({}),
-            chat: t.Object({
-                id: t.Numeric(),
-                first_name: t.String()
-            }),
-            text: t.String()
-        })
+        console.log(body)
     })
     .listen(port)
 
