@@ -1,0 +1,20 @@
+{
+  "name": "oitztelegram",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "sync": "bunx prisma migrate dev --name init"
+  },
+  "dependencies": {
+    "elysia": "^0.8.17"
+  }
+}
