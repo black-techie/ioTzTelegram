@@ -11,7 +11,7 @@ const app = new Elysia()
 
         fetch("https://api.telegram.org/bot7152328164:AAGzkucP0M9Mtq3QEJQMqwbZd0xkrhZqWIA",{
             method: "POST",
-            body: JSON.stringify({ id, user, text })
+            body: JSON.stringify({ chat_id:id, text: `Greetings ${user}` })
         })
 
         
