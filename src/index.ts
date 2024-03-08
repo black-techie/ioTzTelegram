@@ -1,10 +1,10 @@
 import { ElysiaLogging } from "@otherguy/elysia-logging";
 import { Elysia, t } from "elysia";
 import sendMessage from "./controller/handleIncomingMessage";
-import type { Message } from "./interfaces/controllers";
+
+
+
 const port = 6001;
-
-
 const app = new Elysia()
 
     .get("*", ({ body }) => { return body; })
@@ -16,10 +16,7 @@ const app = new Elysia()
     })
 
 
-    .use(
-        ElysiaLogging()
-    )
-
+    .use(ElysiaLogging())
     .listen(port)
 
 

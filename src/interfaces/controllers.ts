@@ -15,8 +15,14 @@ interface Message {
     text: string;
 }
 
+interface sendMessage {
+    chatId: number,
+    text: String
+}
+
 
 
 export type {
-    Message
+    Message,
+    sendMessage
 }
